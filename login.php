@@ -1,7 +1,6 @@
 <?php
 session_start();
 require_once 'kringloop_centrum_duurzaam/config/database.php';
-include 'kringloop_centrum_duurzaam/includes/header.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -54,5 +53,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <?php if (isset($error)) echo "<p style='color:red'>$error</p>"; ?>
 </form>
-
-<?php include 'kringloop_centrum_duurzaam/includes/footer.php'; ?>
