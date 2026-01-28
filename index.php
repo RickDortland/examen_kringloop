@@ -1,3 +1,3 @@
 <?php
-include 'kringloop_centrum_duurzaam/includes/header.html';
+include 'kringloop_centrum_duurzaam/includes/sidebar.html';
 ?>
