@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         switch ($user['rollen']) {
             case 'directie':
-                header("Location: kringloop_centrum_duurzaam/admin/admintaak.php");
+                header("Location: kringloop_centrum_duurzaam/admin/admindashboard.php");
                 break;
 
             case 'magazijnmedewerker':
