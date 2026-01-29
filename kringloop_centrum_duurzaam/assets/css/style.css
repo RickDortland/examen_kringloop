@@ -128,25 +128,3 @@ body {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-
-<<<<<<< HEAD
-.hero {
-    text-align: center;
-    color: #ffffff;
-    max-width: 720px;
-    padding: 20px;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-main {
-    display: block;
-    unicode-bidi: isolate;
-}
-=======
-
->>>>>>> 65fb357b083671f079f338788b3c21beedb21e87

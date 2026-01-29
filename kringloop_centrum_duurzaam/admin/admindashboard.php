@@ -48,10 +48,62 @@ $gebruikers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <html lang="nl">
 <head>
     <link rel="stylesheet" href="../assets/css/admindash.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 <meta charset="UTF-8">
 <title>Admin Beheer</title>
 
 </head>
+
+    <header class="site-header">
+        <div class="brand">Kringloop centrum</div>
+
+        <nav class="main-nav" aria-label="Hoofdmenu">
+            <ul class="menu">
+                <li><a href="../../index.php">Home</a></li>
+
+                <li class="has-dropdown">
+                    <a class="menu-link" href="#" aria-haspopup="true" aria-expanded="false">Ritten</a>
+                    <ul class="dropdown" aria-label="Ritten submenu">
+                        <li><a href="Ritten_planning.php">Ritten planning</a></li>
+                    </ul>
+                </li>
+
+
+                 <li><a href="/voorraad.php">Voorraad</a></li>
+
+
+                <li><a href="#">Beheer</a></li>
+
+                <li class="has-dropdown">
+                    <a class="menu-link" href="#" aria-haspopup="true" aria-expanded="false">Admin</a>
+                    <ul class="dropdown" aria-label="Beheer submenu">
+                        <li><a href="Ritten_planning.php">Ritten planning</a></li>
+                            <li class="has-dropdown right">
+                            <a href="#">Voorraadbeheer</a>
+                             <ul class="dropdown submenu" aria-label="Klanten submenu">
+                                <li><a href="#">Magazijn voorraad</a></li>
+                                <li><a href="#">Product voorraad overzicht</a></li>
+                             </ul>
+                            </li>
+                        <li><a href="#">Kledingstukken</a></li>
+                        <li class="has-dropdown right">
+                            <a href="#">Klanten</a>
+                            <ul class="dropdown submenu" aria-label="Klanten submenu">
+                                <li><a href="#">Beheer klanten</a></li>
+                                <li><a href="#">Persoonsgegevens</a></li>
+                                <li><a href="#">wachtwoord aanpassen</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+
+            </ul>
+        </nav>
+    </header>
+</html>
+
+</header>
 <body>
 
 <h1>Admin Beheerpanel</h1>
