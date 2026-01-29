@@ -47,58 +47,10 @@ $gebruikers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+    <link rel="stylesheet" href="../assets/css/admindash.css">
 <meta charset="UTF-8">
 <title>Admin Beheer</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #f2f2f2;
-        padding: 30px;
-    }
-    h1 {
-        color: #2c3e50;
-    }
-    form, table {
-        background: white;
-        padding: 20px;
-        margin-bottom: 25px;
-        border-radius: 6px;
-    }
-    input, select, button {
-        padding: 8px;
-        margin: 5px 0;
-        width: 100%;
-    }
-    button {
-        background: #3498db;
-        color: white;
-        border: none;
-        cursor: pointer;
-    }
-    button:hover {
-        background: #2980b9;
-    }
-    table {
-        width: 100%;
-        border-collapse: collapse;
-    }
-    th, td {
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-        text-align: left;
-    }
-    th {
-        background: #34495e;
-        color: white;
-    }
-    .delete {
-        color: red;
-        text-decoration: none;
-    }
-    .reset {
-        background: #f39c12;
-    }
-</style>
+
 </head>
 <body>
 

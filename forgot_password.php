@@ -45,11 +45,7 @@ if ($_POST) {
         </form>
         <?php endif; ?>
         
-<<<<<<< HEAD
         <a href="login.php">← Terug naar inloggen</a>
-=======
-        <a href="index.php">← Terug naar inloggen</a>
->>>>>>> 960764d731173a853f6acd1eb26da3e1ef88efe3
     </div>
 </body>
 </html>
