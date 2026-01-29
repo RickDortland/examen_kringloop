@@ -1,3 +1,6 @@
+// Auteur : Rayan
+// Inhoud : Logica voor het database verbinding
+// Laatst bijgewerkt : 29 - 01 - 2026
 <?php
 $host = "localhost";
 $dbname = "duurzaam";

@@ -1,3 +1,6 @@
+// Auteur : Mateo
+// Inhoud : Logica voor het wachtwoord resetten
+// Laatst bijgewerkt : 29 - 01 - 2026
 <?php
 session_start();
 require_once 'kringloop_centrum_duurzaam/config/database.php';

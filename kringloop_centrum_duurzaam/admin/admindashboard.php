@@ -1,3 +1,6 @@
+// Auteur : Rick Dortland en Mateo
+// Inhoud : Logica voor het admin dashboard
+// Laatst bijgewerkt : 29 - 01 - 2026
 <?php
 session_start();
 require_once '../config/database.php';

@@ -1,3 +1,6 @@
+// Auteur : Rick Dortland
+// Inhoud : Logica voor het inloggen
+// Laatst bijgewerkt : 29 - 01 - 2026
 <?php
 session_start();
 require_once 'kringloop_centrum_duurzaam/config/database.php';

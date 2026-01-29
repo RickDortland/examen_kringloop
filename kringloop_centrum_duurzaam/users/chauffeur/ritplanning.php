@@ -1,3 +1,6 @@
+// Auteur : Rayan en Rick
+// Inhoud : Logica voor het ritplanning voor chauffeurs
+// Laatst bijgewerkt : 29 - 01 - 2026
 <?php
 session_start();
 require_once '../../config/database.php';

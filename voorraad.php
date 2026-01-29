@@ -1,3 +1,6 @@
+// Auteur : Armandas Rakevicius
+// Inhoud : Logica voor het voorraadbeheer
+// Laatst bijgewerkt : 29 - 01 - 2026
 <?php
 // Dit bestand toont een lijst met spullen op voorraad en een formulier om nieuwe artikelen toe te voegen
 
@@ -7,7 +10,7 @@ include 'kringloop_centrum_duurzaam/includes/sidebar.html';
 include 'kringloop_centrum_duurzaam/config/database.php';
 
 class Voorraad {
-    var $pdo; // PDO variabele aanmaken om database te gebruiken 
+    public $pdo; // PDO publiciabele aanmaken om database te gebruiken 
 
     // constructor om PDO te initialiseren
     function __construct($pdo) {
@@ -26,7 +29,7 @@ class Voorraad {
 $voorraad = new Voorraad($pdo);
 
 class Artikel {
-    var $pdo; // PDO variabele aanmaken om database te gebruiken
+    public $pdo; // PDO publiciabele aanmaken om database te gebruiken
 
     function __construct($pdo) {
         $this->pdo = $pdo;
