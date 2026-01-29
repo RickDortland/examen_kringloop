@@ -81,19 +81,7 @@ if (isset($_GET['edit'])) {
 <html>
 <head>
     <title>Ritplanning</title>
-    <style>
-        body { font-family: Arial; margin: 20px; }
-        .container { max-width: 1000px; margin: auto; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th, td { border: 1px solid #ddd; padding: 10px; }
-        th { background: #4CAF50; color: white; }
-        form { background: #f9f9f9; padding: 15px; border-radius: 5px; }
-        input, select { padding: 8px; width: 100%; margin: 5px 0; }
-        button { padding: 10px 20px; border: none; cursor: pointer; }
-        .success { background: #d4edda; color: #155724; padding: 10px; margin-bottom: 10px; }
-        .error { background: #f8d7da; color: #721c24; padding: 10px; margin-bottom: 10px; }
-        .delete-btn { background: #f44336; color: white; }
-    </style>
+ <link rel="stylesheet" href="../../assets/css/ritplanning.css">
 </head>
 <body>
 
