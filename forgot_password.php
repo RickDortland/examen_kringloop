@@ -44,6 +44,7 @@ if ($_POST) {
             <button type="submit">Nieuw Wachtwoord</button>
         </form>
         <?php endif; ?>
+        
         <a href="login.php">← Terug naar inloggen</a>
     </div>
 </body>
