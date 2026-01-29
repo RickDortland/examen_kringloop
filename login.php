@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 break;
 
             case 'chauffeur':
-                header("Location: kringloop_centrum_duurzaam/users/chauffeur/chauffeur.php");
+                header("Location: kringloop_centrum_duurzaam/users/chauffeur/ritplanning.php");
                 break;
 
             default:
