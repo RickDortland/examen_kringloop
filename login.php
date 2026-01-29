@@ -40,16 +40,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
+<head>
+    <link rel="stylesheet" href="kringloop_centrum_duurzaam/assets/css/login.css">
+</head>
+<body>
+<div class="login-container">
+    <form method="post">
+        <h1>Inloggen</h1>
 
-<form method="post">
-    <h2>Inloggen</h2>
+        <div class="form-group">
+            <label for="gebruikersnaam">Gebruikersnaam</label>
+            <input type="text" name="gebruikersnaam" id="gebruikersnaam" placeholder="Gebruikersnaam" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="wachtwoord">Wachtwoord</label>
+            <input type="password" name="wachtwoord" id="wachtwoord" placeholder="Wachtwoord" required>
+        </div>
 
-    <input type="text" name="gebruikersnaam" placeholder="Gebruikersnaam" required>
-    <input type="password" name="wachtwoord" placeholder="Wachtwoord" required>
+        <button type="submit">Login</button>
 
-    <button type="submit">Login</button>
+        <a href="forgot_password.php">Wachtwoord vergeten?</a>
 
-    <a href="forgot_password.php">Wachtwoord vergeten?</a>
-
-    <?php if (isset($error)) echo "<p style='color:red'>$error</p>"; ?>
-</form>
+        <?php if (isset($error)) echo "<p style='color:red'>$error</p>"; ?>
+    </form>
+</div>
+</body>
