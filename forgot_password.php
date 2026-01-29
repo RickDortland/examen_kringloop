@@ -46,10 +46,10 @@ if ($_POST) {
         <?php endif; ?>
         
 <<<<<<< HEAD
-        <a href="login.php">← Terug naar inloggen</a>
-=======
         <a href="index.php">← Terug naar inloggen</a>
->>>>>>> 960764d731173a853f6acd1eb26da3e1ef88efe3
+=======
+        <a href="login.php">← Terug naar inloggen</a>
+>>>>>>> 8f588b63159eb26a1d57cdb4b21c2a6d3cbe6d85
     </div>
 </body>
 </html>

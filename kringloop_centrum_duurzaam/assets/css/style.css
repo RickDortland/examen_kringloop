@@ -129,6 +129,7 @@ body {
   .sidenav a {font-size: 18px;}
 }
 
+<<<<<<< HEAD
 .hero {
     text-align: center;
     color: #ffffff;
@@ -146,3 +147,6 @@ main {
     display: block;
     unicode-bidi: isolate;
 }
+=======
+
+>>>>>>> 65fb357b083671f079f338788b3c21beedb21e87
