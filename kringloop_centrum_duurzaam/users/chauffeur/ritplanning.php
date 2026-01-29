@@ -2,7 +2,7 @@
 session_start();
 require_once '../../config/database.php';
 
-// Check if user is logged in and is a chauffeur
+// checkt of je ingelogd ben als chauffeur
 if (!isset($_SESSION['gebruiker']) || $_SESSION['gebruiker']['rollen'] !== 'chauffeur') {
     header("Location: ../../../login.php");
     exit;
@@ -12,14 +12,14 @@ $chauffeur_id = $_SESSION['gebruiker']['id'];
 $message = '';
 $error = '';
 
-// ===================== DELETE =====================
+//delete
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'delete') {
     $stmt = $pdo->prepare("DELETE FROM planning WHERE id = ?");
     $stmt->execute([$_POST['id']]);
-    $message = "✅ Rit verwijderd";
+    $message = "Rit verwijderd";
 }
 
-// ===================== ADD / EDIT =====================
+// ADD / EDIT
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && in_array($_POST['action'], ['add', 'edit'])) {
 
     $artikel_id = $_POST['artikel_id'];
@@ -28,12 +28,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && in_array
     $ophalen_of_bezorgen = $_POST['ophalen_of_bezorgen'];
     $afspraak_op = $_POST['afspraak_op'];
 
-    // ✅ Check of artikel bestaat (foreign key fix)
+    // Check of artikel bestaat (foreign key fix)
     $checkArtikel = $pdo->prepare("SELECT id FROM artikel WHERE id = ?");
     $checkArtikel->execute([$artikel_id]);
 
     if ($checkArtikel->rowCount() === 0) {
-        $error = "❌ Geselecteerd artikel bestaat niet.";
+        $error = "Geselecteerd artikel bestaat niet.";
     } else {
         if ($_POST['action'] === 'add') {
             $stmt = $pdo->prepare("
@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && in_array
                 VALUES (?, ?, ?, ?, ?)
             ");
             $stmt->execute([$artikel_id, $klant_id, $kenteken, $ophalen_of_bezorgen, $afspraak_op]);
-            $message = "✅ Rit toegevoegd";
+            $message = "Rit toegevoegd";
         } else {
             $stmt = $pdo->prepare("
                 UPDATE planning 
@@ -57,12 +57,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && in_array
                 $afspraak_op,
                 $_POST['id']
             ]);
-            $message = "✅ Rit bijgewerkt";
+            $message = "Rit bijgewerkt";
         }
     }
 }
 
-// ===================== DATA OPHALEN =====================
 $ritten = $pdo->query("SELECT * FROM planning ORDER BY afspraak_op DESC")->fetchAll(PDO::FETCH_ASSOC);
 $artikelen = $pdo->query("SELECT id, naam FROM artikel ORDER BY naam")->fetchAll(PDO::FETCH_ASSOC);
 
@@ -109,7 +108,6 @@ if (isset($_GET['edit'])) {
             <input type="hidden" name="id" value="<?= $edit_rit['id'] ?>">
         <?php endif; ?>
 
-        <!-- ✅ ARTIKEL DROPDOWN -->
         <label>Artikel</label>
         <select name="artikel_id" required>
             <option value="">-- Kies artikel --</option>
