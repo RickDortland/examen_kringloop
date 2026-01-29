@@ -101,6 +101,11 @@ $gebruikers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </style>
 </head>
 <body>
+    <header>
+        <?php
+        include '../includes/header.php';
+        ?>
+    </header>
 
 <h1>Admin Beheerpanel</h1>
 
